@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+
+    <div class="menu">
+        <button onclick="showAddProductForm()">Add Product</button>
+        <button onclick="showInventory()">Show Inventory</button>
+        <button onclick="showSalesForm()">Make Sale</button>
+    </div>
+
+    <div id="addProductForm" class="form">
+        <h2>Add Product</h2>
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="productPrice" placeholder="Product Price" required>
+        <input type="number" id="productQuantity" placeholder="Product Quantity" required>
+        <button onclick="addProduct()">Add</button>
+    </div>
+
+    <div id="salesForm" class="form">
+        <h2>Make Sale</h2>
+        <input type="text" id="saleProductName" placeholder="Product Name" required>
+        <input type="number" id="saleQuantity" placeholder="Quantity" required>
+        <button onclick="makeSale()">Make Sale</button>
+    </div>
+
+    <div id="inventoryTable">
+        <h2>Inventory List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryList"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
